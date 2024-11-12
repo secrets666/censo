@@ -1,0 +1,460 @@
+nohup: 忽略输入
+{'n_cpu': 0, 'device': device(type='cuda', index=0), 'batch_size_test': 40, 'batch_size': 2, 'lr': 0.001, 'weight_decay': 0, 'display_interval': 250, 'num_epochs': 50, 'early_stopping': True, 'patience': 20, 'gradient_clipping': True, 'clipping_threshold': 1.0, 'input_dim': 8, 'output_dim': 2, 'input_length': 12, 'output_length': 24, 'input_gap': 1, 'pred_shift': 24, 'model_i': 0, 'kernel_size': (3, 3), 'bias': True, 'hidden_dim_1': (64, 64, 64, 64), 'd_attn_1': 64, 'ssr_decay_rate': 8e-05, 'hidden_dim_2': (32, 32, 32, 32), 'd_attn_2': 16, 'hidden_dim_3': (32, 32, 32, 32), 'd_attn_3': 16, 'hidden_dim_4': (32, 32, 32, 32), 'd_attn_4': 16, 'hidden_dim_5': (32, 32, 32, 32), 'd_attn_5': 16, 'use_hc': 1, 'time': 'hybrid', 'save_last': 0}
+
+reading data
+(1692, 24, 48, 21, 4) (432, 24, 48, 1, 4)
+(1692, 21, 3) (432, 1, 3)
+processing training set
+(237, 38, 24, 48, 21, 4)
+(4977, 38, 24, 48, 4)
+(4977, 38, 3)
+predData.shape= (4977, 38, 2, 24, 48)
+{'sst': (4977, 38, 24, 48, 6), 'nino target': (4977, 38, 3)}
+processing eval set
+(395, 38, 24, 48, 1, 4)
+(395, 38, 24, 48, 4)
+(395, 38, 3)
+predData.shape= (395, 38, 2, 24, 48)
+{'sst': (395, 38, 24, 48, 6), 'nino target': (395, 38, 3)}
+Total params num: 2071938
+*****************Finish Parameter****************
+loading train dataloader
+loading eval dataloader
+
+epoch: 1
+batch training loss: 1097.76, 194.80, score: -40.5822, ssr ratio: 0.9999
+batch training loss: 451.32, 20.75, score: 105.9947, ssr ratio: 0.9799
+batch training loss: 377.41, 21.51, score: 99.9050, ssr ratio: 0.9599
+batch training loss: 454.47, 29.66, score: 104.7665, ssr ratio: 0.9399
+batch training loss: 375.69, 13.72, score: 101.1632, ssr ratio: 0.9199
+batch training loss: 389.10, 23.90, score: 105.0804, ssr ratio: 0.8999
+batch training loss: 371.70, 18.02, score: 64.7766, ssr ratio: 0.8799
+batch training loss: 373.61, 31.64, score: 101.8259, ssr ratio: 0.8599
+batch training loss: 446.11, 22.84, score: 106.5944, ssr ratio: 0.8399
+batch training loss: 502.85, 13.29, score: 106.8229, ssr ratio: 0.8199
+tensor([0.9396, 0.8929, 0.8514, 0.8174, 0.7907, 0.7661, 0.7426, 0.7187, 0.6935,
+        0.6677, 0.6475, 0.6379, 0.6384, 0.6435, 0.6464, 0.6398, 0.6204, 0.5929,
+        0.5706, 0.5597, 0.5528, 0.5485, 0.5460, 0.5423], device='cuda:0')
+epoch eval loss:
+sst: 624.33, nino: 120.35, sc: 51.0271
+eval score is improved from -inf to 51.02710, saving model
+
+epoch: 2
+batch training loss: 399.56, 18.39, score: 105.9847, ssr ratio: 0.8008
+batch training loss: 393.00, 25.41, score: 103.4292, ssr ratio: 0.7808
+batch training loss: 499.25, 13.20, score: 106.7470, ssr ratio: 0.7608
+batch training loss: 356.49, 10.39, score: 91.4615, ssr ratio: 0.7408
+batch training loss: 452.86, 37.40, score: 74.3927, ssr ratio: 0.7208
+batch training loss: 399.37, 19.29, score: 79.9461, ssr ratio: 0.7008
+batch training loss: 375.10, 26.84, score: 94.7474, ssr ratio: 0.6808
+batch training loss: 437.04, 30.01, score: 56.2985, ssr ratio: 0.6608
+batch training loss: 353.63, 15.13, score: 100.2233, ssr ratio: 0.6408
+batch training loss: 380.09, 36.87, score: 103.9281, ssr ratio: 0.6208
+tensor([0.9350, 0.8912, 0.8529, 0.8197, 0.7906, 0.7609, 0.7319, 0.7047, 0.6790,
+        0.6528, 0.6311, 0.6184, 0.6160, 0.6164, 0.6126, 0.5982, 0.5720, 0.5415,
+        0.5204, 0.5137, 0.5124, 0.5146, 0.5186, 0.5217], device='cuda:0')
+epoch eval loss:
+sst: 600.35, nino: 126.72, sc: 46.4785
+Epoch 00002: reducing learning rate of group 0 to 3.0000e-04.
+eval score is not improved for 1 epoch
+
+epoch: 3
+batch training loss: 425.13, 18.78, score: 77.1833, ssr ratio: 0.6017
+batch training loss: 383.27, 20.20, score: 104.8135, ssr ratio: 0.5817
+batch training loss: 387.99, 23.11, score: 60.8902, ssr ratio: 0.5617
+batch training loss: 391.04, 18.97, score: 70.0657, ssr ratio: 0.5417
+batch training loss: 409.90, 21.58, score: 105.8265, ssr ratio: 0.5217
+batch training loss: 378.83, 27.02, score: 102.8855, ssr ratio: 0.5017
+batch training loss: 367.62, 36.19, score: 96.8250, ssr ratio: 0.4817
+batch training loss: 390.41, 24.91, score: 88.5283, ssr ratio: 0.4617
+batch training loss: 435.90, 30.25, score: 104.6081, ssr ratio: 0.4417
+batch training loss: 421.84, 57.49, score: 4.9846, ssr ratio: 0.4217
+tensor([0.9319, 0.8842, 0.8412, 0.8025, 0.7661, 0.7295, 0.6970, 0.6712, 0.6498,
+        0.6285, 0.6118, 0.6035, 0.6043, 0.6069, 0.6040, 0.5901, 0.5644, 0.5345,
+        0.5140, 0.5081, 0.5072, 0.5084, 0.5107, 0.5125], device='cuda:0')
+epoch eval loss:
+sst: 587.23, nino: 125.10, sc: 45.4901
+Epoch 00003: reducing learning rate of group 0 to 1.0000e-04.
+eval score is not improved for 2 epoch
+
+epoch: 4
+batch training loss: 411.51, 29.86, score: 91.5773, ssr ratio: 0.4026
+batch training loss: 389.03, 25.46, score: 84.7376, ssr ratio: 0.3826
+batch training loss: 397.81, 15.68, score: 97.3097, ssr ratio: 0.3626
+batch training loss: 439.60, 18.77, score: 106.4098, ssr ratio: 0.3426
+batch training loss: 439.65, 20.52, score: 93.8385, ssr ratio: 0.3226
+batch training loss: 458.44, 28.51, score: 98.4192, ssr ratio: 0.3026
+batch training loss: 442.08, 31.44, score: 105.2344, ssr ratio: 0.2826
+batch training loss: 452.06, 44.17, score: 102.6952, ssr ratio: 0.2626
+batch training loss: 415.05, 29.50, score: 3.1070, ssr ratio: 0.2426
+batch training loss: 470.06, 26.76, score: 102.6502, ssr ratio: 0.2226
+tensor([0.9387, 0.8957, 0.8570, 0.8228, 0.7906, 0.7567, 0.7254, 0.6992, 0.6759,
+        0.6521, 0.6331, 0.6227, 0.6220, 0.6239, 0.6215, 0.6080, 0.5818, 0.5504,
+        0.5279, 0.5193, 0.5158, 0.5155, 0.5172, 0.5194], device='cuda:0')
+epoch eval loss:
+sst: 586.32, nino: 122.63, sc: 47.5662
+eval score is not improved for 3 epoch
+
+epoch: 5
+batch training loss: 494.25, 36.52, score: 86.3380, ssr ratio: 0.2034
+batch training loss: 534.14, 60.62, score: 95.0957, ssr ratio: 0.1834
+batch training loss: 511.49, 27.75, score: 104.8412, ssr ratio: 0.1634
+batch training loss: 565.34, 29.73, score: 75.5521, ssr ratio: 0.1434
+batch training loss: 475.17, 36.26, score: 86.7656, ssr ratio: 0.1234
+batch training loss: 472.66, 19.61, score: 29.7179, ssr ratio: 0.1034
+batch training loss: 490.74, 49.60, score: 81.4124, ssr ratio: 0.0834
+batch training loss: 489.83, 31.85, score: 23.0932, ssr ratio: 0.0634
+batch training loss: 456.61, 32.65, score: 104.6702, ssr ratio: 0.0434
+batch training loss: 566.14, 67.07, score: 14.2712, ssr ratio: 0.0234
+tensor([0.9385, 0.8947, 0.8540, 0.8171, 0.7823, 0.7461, 0.7132, 0.6858, 0.6618,
+        0.6386, 0.6211, 0.6133, 0.6151, 0.6189, 0.6175, 0.6035, 0.5757, 0.5427,
+        0.5190, 0.5093, 0.5049, 0.5043, 0.5061, 0.5087], device='cuda:0')
+epoch eval loss:
+sst: 595.16, nino: 122.61, sc: 46.6485
+eval score is not improved for 4 epoch
+
+epoch: 6
+batch training loss: 538.40, 36.19, score: 78.5628, ssr ratio: 0.0043
+batch training loss: 548.80, 53.94, score: 100.4530, ssr ratio: 0.0000
+batch training loss: 552.58, 40.00, score: 102.3608, ssr ratio: 0.0000
+batch training loss: 530.14, 34.66, score: 103.6523, ssr ratio: 0.0000
+batch training loss: 540.74, 111.22, score: 80.1031, ssr ratio: 0.0000
+batch training loss: 455.62, 37.06, score: 65.4246, ssr ratio: 0.0000
+batch training loss: 537.27, 64.82, score: 89.7466, ssr ratio: 0.0000
+batch training loss: 519.66, 53.45, score: 79.5483, ssr ratio: 0.0000
+batch training loss: 602.87, 55.09, score: 67.0931, ssr ratio: 0.0000
+batch training loss: 501.81, 48.08, score: 30.4687, ssr ratio: 0.0000
+tensor([0.9391, 0.8944, 0.8524, 0.8148, 0.7797, 0.7444, 0.7132, 0.6874, 0.6645,
+        0.6421, 0.6255, 0.6182, 0.6202, 0.6235, 0.6216, 0.6072, 0.5792, 0.5464,
+        0.5239, 0.5156, 0.5122, 0.5121, 0.5141, 0.5156], device='cuda:0')
+epoch eval loss:
+sst: 592.95, nino: 122.68, sc: 47.1564
+eval score is not improved for 5 epoch
+
+epoch: 7
+batch training loss: 519.09, 55.34, score: 91.0547, ssr ratio: 0.0000
+batch training loss: 491.46, 40.50, score: 85.1797, ssr ratio: 0.0000
+batch training loss: 526.09, 42.38, score: 92.2123, ssr ratio: 0.0000
+batch training loss: 490.50, 38.18, score: 102.7417, ssr ratio: 0.0000
+batch training loss: 561.76, 34.84, score: 102.7947, ssr ratio: 0.0000
+batch training loss: 544.12, 43.12, score: 103.6682, ssr ratio: 0.0000
+batch training loss: 572.13, 37.32, score: 102.8101, ssr ratio: 0.0000
+batch training loss: 507.81, 41.31, score: 97.8174, ssr ratio: 0.0000
+batch training loss: 591.17, 34.35, score: 97.2682, ssr ratio: 0.0000
+batch training loss: 459.55, 34.22, score: 104.6930, ssr ratio: 0.0000
+tensor([0.9387, 0.8940, 0.8515, 0.8127, 0.7760, 0.7388, 0.7060, 0.6791, 0.6563,
+        0.6350, 0.6201, 0.6146, 0.6180, 0.6226, 0.6213, 0.6066, 0.5778, 0.5440,
+        0.5205, 0.5116, 0.5082, 0.5081, 0.5098, 0.5114], device='cuda:0')
+epoch eval loss:
+sst: 593.22, nino: 122.62, sc: 46.8162
+eval score is not improved for 6 epoch
+
+epoch: 8
+batch training loss: 614.49, 49.42, score: -28.0080, ssr ratio: 0.0000
+batch training loss: 519.76, 50.09, score: 101.3435, ssr ratio: 0.0000
+batch training loss: 594.39, 50.37, score: 80.8101, ssr ratio: 0.0000
+batch training loss: 510.63, 35.87, score: 102.9865, ssr ratio: 0.0000
+batch training loss: 538.21, 46.08, score: 85.5697, ssr ratio: 0.0000
+batch training loss: 504.30, 81.32, score: 77.5606, ssr ratio: 0.0000
+batch training loss: 511.67, 35.36, score: 66.6123, ssr ratio: 0.0000
+batch training loss: 530.87, 44.44, score: 100.9096, ssr ratio: 0.0000
+batch training loss: 502.88, 45.00, score: 3.5636, ssr ratio: 0.0000
+batch training loss: 549.69, 53.82, score: 84.7278, ssr ratio: 0.0000
+tensor([0.9394, 0.8949, 0.8526, 0.8144, 0.7778, 0.7402, 0.7065, 0.6787, 0.6545,
+        0.6315, 0.6152, 0.6092, 0.6126, 0.6173, 0.6164, 0.6019, 0.5730, 0.5390,
+        0.5155, 0.5068, 0.5033, 0.5034, 0.5055, 0.5073], device='cuda:0')
+epoch eval loss:
+sst: 591.53, nino: 124.27, sc: 46.1112
+eval score is not improved for 7 epoch
+
+epoch: 9
+batch training loss: 531.73, 52.92, score: 91.4649, ssr ratio: 0.0000
+batch training loss: 563.98, 58.30, score: 101.8274, ssr ratio: 0.0000
+batch training loss: 578.44, 41.06, score: 93.0700, ssr ratio: 0.0000
+batch training loss: 597.93, 33.26, score: 56.4422, ssr ratio: 0.0000
+batch training loss: 459.24, 51.14, score: 75.1292, ssr ratio: 0.0000
+batch training loss: 550.26, 70.88, score: 96.7085, ssr ratio: 0.0000
+batch training loss: 595.42, 37.50, score: 103.2460, ssr ratio: 0.0000
+batch training loss: 511.97, 69.72, score: 89.5369, ssr ratio: 0.0000
+batch training loss: 606.89, 64.68, score: 97.8298, ssr ratio: 0.0000
+batch training loss: 547.52, 66.62, score: 45.0807, ssr ratio: 0.0000
+tensor([0.9392, 0.8942, 0.8520, 0.8138, 0.7768, 0.7384, 0.7040, 0.6755, 0.6506,
+        0.6272, 0.6115, 0.6064, 0.6114, 0.6171, 0.6168, 0.6027, 0.5740, 0.5405,
+        0.5181, 0.5104, 0.5077, 0.5085, 0.5110, 0.5128], device='cuda:0')
+epoch eval loss:
+sst: 593.49, nino: 123.89, sc: 46.3088
+eval score is not improved for 8 epoch
+
+epoch: 10
+batch training loss: 574.73, 63.82, score: 37.6247, ssr ratio: 0.0000
+batch training loss: 585.87, 28.12, score: 55.2671, ssr ratio: 0.0000
+batch training loss: 622.32, 71.75, score: 78.6271, ssr ratio: 0.0000
+batch training loss: 471.89, 38.52, score: 21.3147, ssr ratio: 0.0000
+batch training loss: 548.61, 73.28, score: 39.2642, ssr ratio: 0.0000
+batch training loss: 497.74, 47.63, score: 88.9423, ssr ratio: 0.0000
+batch training loss: 530.01, 24.39, score: 94.8189, ssr ratio: 0.0000
+batch training loss: 484.15, 36.29, score: 68.5958, ssr ratio: 0.0000
+batch training loss: 562.39, 98.72, score: 16.0326, ssr ratio: 0.0000
+batch training loss: 625.22, 30.13, score: 71.6936, ssr ratio: 0.0000
+tensor([0.9402, 0.8953, 0.8522, 0.8128, 0.7747, 0.7354, 0.7005, 0.6722, 0.6486,
+        0.6271, 0.6131, 0.6093, 0.6146, 0.6200, 0.6191, 0.6046, 0.5754, 0.5414,
+        0.5182, 0.5099, 0.5068, 0.5075, 0.5106, 0.5133], device='cuda:0')
+epoch eval loss:
+sst: 592.64, nino: 123.14, sc: 46.4405
+eval score is not improved for 9 epoch
+
+epoch: 11
+batch training loss: 464.21, 25.84, score: 51.1912, ssr ratio: 0.0000
+batch training loss: 545.42, 41.84, score: 85.8215, ssr ratio: 0.0000
+batch training loss: 506.83, 43.26, score: 103.4373, ssr ratio: 0.0000
+batch training loss: 539.25, 59.49, score: -8.1249, ssr ratio: 0.0000
+batch training loss: 560.17, 27.01, score: 104.9393, ssr ratio: 0.0000
+batch training loss: 541.82, 51.05, score: 102.8234, ssr ratio: 0.0000
+batch training loss: 515.58, 61.38, score: 83.5639, ssr ratio: 0.0000
+batch training loss: 511.98, 49.14, score: 93.0055, ssr ratio: 0.0000
+batch training loss: 534.56, 50.93, score: 100.5743, ssr ratio: 0.0000
+batch training loss: 472.21, 51.01, score: 96.7751, ssr ratio: 0.0000
+tensor([0.9425, 0.8987, 0.8563, 0.8182, 0.7822, 0.7446, 0.7103, 0.6817, 0.6571,
+        0.6346, 0.6194, 0.6144, 0.6181, 0.6223, 0.6202, 0.6052, 0.5761, 0.5418,
+        0.5179, 0.5088, 0.5052, 0.5052, 0.5071, 0.5085], device='cuda:0')
+epoch eval loss:
+sst: 590.80, nino: 123.13, sc: 46.5979
+eval score is not improved for 10 epoch
+
+epoch: 12
+batch training loss: 566.18, 93.90, score: 24.3065, ssr ratio: 0.0000
+batch training loss: 547.12, 75.49, score: 66.1144, ssr ratio: 0.0000
+batch training loss: 549.30, 51.89, score: -1.2228, ssr ratio: 0.0000
+batch training loss: 580.06, 43.75, score: 64.0586, ssr ratio: 0.0000
+batch training loss: 534.03, 31.93, score: 104.0072, ssr ratio: 0.0000
+batch training loss: 532.78, 42.66, score: 102.4162, ssr ratio: 0.0000
+batch training loss: 546.42, 32.59, score: 82.4367, ssr ratio: 0.0000
+batch training loss: 487.02, 43.59, score: 33.3823, ssr ratio: 0.0000
+batch training loss: 558.05, 30.54, score: 104.5430, ssr ratio: 0.0000
+batch training loss: 492.88, 72.19, score: 94.9158, ssr ratio: 0.0000
+tensor([0.9452, 0.9029, 0.8624, 0.8253, 0.7890, 0.7506, 0.7156, 0.6861, 0.6605,
+        0.6368, 0.6208, 0.6154, 0.6193, 0.6242, 0.6233, 0.6089, 0.5798, 0.5456,
+        0.5222, 0.5135, 0.5106, 0.5115, 0.5145, 0.5170], device='cuda:0')
+epoch eval loss:
+sst: 592.47, nino: 122.63, sc: 47.2105
+eval score is not improved for 11 epoch
+
+epoch: 13
+batch training loss: 534.35, 45.50, score: 103.1915, ssr ratio: 0.0000
+batch training loss: 534.01, 32.42, score: 50.0101, ssr ratio: 0.0000
+batch training loss: 505.16, 28.20, score: 103.9488, ssr ratio: 0.0000
+batch training loss: 512.04, 41.69, score: 104.0436, ssr ratio: 0.0000
+batch training loss: 476.44, 37.70, score: 14.4394, ssr ratio: 0.0000
+batch training loss: 555.84, 27.94, score: 105.4135, ssr ratio: 0.0000
+batch training loss: 502.37, 36.84, score: 104.4775, ssr ratio: 0.0000
+batch training loss: 552.09, 52.85, score: 32.0609, ssr ratio: 0.0000
+batch training loss: 604.70, 39.47, score: 65.7645, ssr ratio: 0.0000
+batch training loss: 550.28, 33.10, score: 104.0383, ssr ratio: 0.0000
+tensor([0.9461, 0.9052, 0.8660, 0.8303, 0.7954, 0.7576, 0.7221, 0.6915, 0.6644,
+        0.6399, 0.6241, 0.6191, 0.6227, 0.6259, 0.6221, 0.6047, 0.5738, 0.5393,
+        0.5166, 0.5093, 0.5072, 0.5087, 0.5124, 0.5154], device='cuda:0')
+epoch eval loss:
+sst: 591.91, nino: 122.56, sc: 47.1411
+eval score is not improved for 12 epoch
+
+epoch: 14
+batch training loss: 566.98, 53.94, score: 43.6699, ssr ratio: 0.0000
+batch training loss: 487.79, 79.38, score: 94.5273, ssr ratio: 0.0000
+batch training loss: 537.17, 42.46, score: 71.6878, ssr ratio: 0.0000
+batch training loss: 519.97, 45.03, score: 85.2740, ssr ratio: 0.0000
+batch training loss: 568.44, 38.15, score: 87.2763, ssr ratio: 0.0000
+batch training loss: 563.15, 77.79, score: 74.3636, ssr ratio: 0.0000
+batch training loss: 584.50, 33.74, score: 98.6450, ssr ratio: 0.0000
+batch training loss: 497.20, 30.37, score: 83.8486, ssr ratio: 0.0000
+batch training loss: 496.03, 59.58, score: 80.2752, ssr ratio: 0.0000
+batch training loss: 513.63, 53.22, score: 26.4955, ssr ratio: 0.0000
+tensor([0.9412, 0.8977, 0.8569, 0.8199, 0.7832, 0.7448, 0.7109, 0.6834, 0.6590,
+        0.6361, 0.6210, 0.6168, 0.6212, 0.6252, 0.6219, 0.6054, 0.5750, 0.5402,
+        0.5168, 0.5086, 0.5062, 0.5072, 0.5100, 0.5115], device='cuda:0')
+epoch eval loss:
+sst: 593.02, nino: 122.96, sc: 46.7594
+eval score is not improved for 13 epoch
+
+epoch: 15
+batch training loss: 552.76, 61.80, score: 45.3353, ssr ratio: 0.0000
+batch training loss: 494.77, 45.28, score: 103.0752, ssr ratio: 0.0000
+batch training loss: 529.14, 52.39, score: 41.4913, ssr ratio: 0.0000
+batch training loss: 502.26, 60.74, score: 67.8275, ssr ratio: 0.0000
+batch training loss: 532.01, 35.67, score: 80.0596, ssr ratio: 0.0000
+batch training loss: 553.33, 33.88, score: 45.1143, ssr ratio: 0.0000
+batch training loss: 629.41, 71.86, score: 96.9303, ssr ratio: 0.0000
+batch training loss: 513.25, 70.31, score: 101.7876, ssr ratio: 0.0000
+batch training loss: 566.61, 89.05, score: -24.0351, ssr ratio: 0.0000
+batch training loss: 624.03, 40.59, score: 88.6259, ssr ratio: 0.0000
+tensor([0.9403, 0.8959, 0.8535, 0.8148, 0.7772, 0.7382, 0.7037, 0.6766, 0.6542,
+        0.6333, 0.6190, 0.6146, 0.6190, 0.6239, 0.6223, 0.6069, 0.5768, 0.5418,
+        0.5183, 0.5108, 0.5091, 0.5110, 0.5151, 0.5183], device='cuda:0')
+epoch eval loss:
+sst: 593.04, nino: 122.41, sc: 46.9240
+eval score is not improved for 14 epoch
+
+epoch: 16
+batch training loss: 506.33, 52.18, score: 98.1866, ssr ratio: 0.0000
+batch training loss: 591.09, 49.40, score: 101.5799, ssr ratio: 0.0000
+batch training loss: 518.98, 55.92, score: 53.7622, ssr ratio: 0.0000
+batch training loss: 522.14, 26.65, score: 55.5712, ssr ratio: 0.0000
+batch training loss: 606.48, 44.84, score: 75.3201, ssr ratio: 0.0000
+batch training loss: 512.46, 45.71, score: 53.4901, ssr ratio: 0.0000
+batch training loss: 543.83, 23.58, score: 105.7038, ssr ratio: 0.0000
+batch training loss: 575.18, 42.09, score: 93.5675, ssr ratio: 0.0000
+batch training loss: 521.83, 82.29, score: 83.2013, ssr ratio: 0.0000
+batch training loss: 589.70, 42.07, score: 97.3487, ssr ratio: 0.0000
+tensor([0.9442, 0.9024, 0.8630, 0.8271, 0.7920, 0.7550, 0.7213, 0.6931, 0.6680,
+        0.6444, 0.6282, 0.6231, 0.6270, 0.6318, 0.6300, 0.6148, 0.5848, 0.5494,
+        0.5243, 0.5143, 0.5101, 0.5099, 0.5122, 0.5144], device='cuda:0')
+epoch eval loss:
+sst: 593.24, nino: 122.19, sc: 47.6150
+eval score is not improved for 15 epoch
+
+epoch: 17
+batch training loss: 519.24, 56.89, score: 51.2032, ssr ratio: 0.0000
+batch training loss: 581.89, 56.97, score: 74.7474, ssr ratio: 0.0000
+batch training loss: 535.75, 25.66, score: 7.3224, ssr ratio: 0.0000
+batch training loss: 548.89, 32.75, score: 91.2605, ssr ratio: 0.0000
+batch training loss: 591.96, 43.18, score: 94.7400, ssr ratio: 0.0000
+batch training loss: 470.74, 44.43, score: 86.1340, ssr ratio: 0.0000
+batch training loss: 585.49, 65.47, score: 88.5895, ssr ratio: 0.0000
+batch training loss: 460.85, 27.32, score: 105.0939, ssr ratio: 0.0000
+batch training loss: 514.29, 41.50, score: 68.9830, ssr ratio: 0.0000
+batch training loss: 488.82, 24.41, score: 105.6703, ssr ratio: 0.0000
+tensor([0.9460, 0.9039, 0.8632, 0.8267, 0.7914, 0.7536, 0.7183, 0.6888, 0.6635,
+        0.6397, 0.6235, 0.6182, 0.6218, 0.6256, 0.6233, 0.6083, 0.5788, 0.5437,
+        0.5188, 0.5092, 0.5056, 0.5060, 0.5089, 0.5113], device='cuda:0')
+epoch eval loss:
+sst: 592.01, nino: 122.63, sc: 47.0611
+eval score is not improved for 16 epoch
+
+epoch: 18
+batch training loss: 571.96, 46.06, score: 86.0906, ssr ratio: 0.0000
+batch training loss: 520.60, 89.54, score: 98.4514, ssr ratio: 0.0000
+batch training loss: 515.51, 47.57, score: 59.8119, ssr ratio: 0.0000
+batch training loss: 574.07, 60.90, score: -8.3653, ssr ratio: 0.0000
+batch training loss: 556.84, 32.91, score: 103.6296, ssr ratio: 0.0000
+batch training loss: 542.41, 54.59, score: 66.9911, ssr ratio: 0.0000
+batch training loss: 464.64, 31.45, score: 66.1090, ssr ratio: 0.0000
+batch training loss: 528.42, 31.67, score: 26.1982, ssr ratio: 0.0000
+batch training loss: 589.83, 54.15, score: 101.4053, ssr ratio: 0.0000
+batch training loss: 505.01, 49.28, score: -29.0800, ssr ratio: 0.0000
+tensor([0.9468, 0.9071, 0.8686, 0.8321, 0.7954, 0.7564, 0.7203, 0.6896, 0.6629,
+        0.6391, 0.6237, 0.6194, 0.6238, 0.6279, 0.6246, 0.6078, 0.5776, 0.5439,
+        0.5216, 0.5145, 0.5130, 0.5152, 0.5195, 0.5233], device='cuda:0')
+epoch eval loss:
+sst: 594.26, nino: 122.62, sc: 47.4825
+eval score is not improved for 17 epoch
+
+epoch: 19
+batch training loss: 525.26, 57.49, score: 101.6218, ssr ratio: 0.0000
+batch training loss: 539.91, 43.89, score: 98.0017, ssr ratio: 0.0000
+batch training loss: 529.13, 76.49, score: 25.1005, ssr ratio: 0.0000
+batch training loss: 571.20, 21.88, score: 94.5617, ssr ratio: 0.0000
+batch training loss: 510.63, 61.46, score: 45.4518, ssr ratio: 0.0000
+batch training loss: 566.51, 21.73, score: 94.9570, ssr ratio: 0.0000
+batch training loss: 546.04, 29.23, score: 104.7874, ssr ratio: 0.0000
+batch training loss: 525.57, 55.80, score: 85.5128, ssr ratio: 0.0000
+batch training loss: 518.40, 47.48, score: 93.0048, ssr ratio: 0.0000
+batch training loss: 540.48, 23.03, score: 93.8660, ssr ratio: 0.0000
+tensor([0.9454, 0.9034, 0.8626, 0.8251, 0.7875, 0.7477, 0.7123, 0.6836, 0.6587,
+        0.6360, 0.6218, 0.6186, 0.6236, 0.6275, 0.6240, 0.6070, 0.5764, 0.5423,
+        0.5205, 0.5143, 0.5130, 0.5144, 0.5177, 0.5197], device='cuda:0')
+epoch eval loss:
+sst: 592.47, nino: 123.14, sc: 47.1496
+eval score is not improved for 18 epoch
+
+epoch: 20
+batch training loss: 533.10, 63.27, score: 99.5423, ssr ratio: 0.0000
+batch training loss: 567.55, 37.74, score: 51.4080, ssr ratio: 0.0000
+batch training loss: 557.49, 50.28, score: 102.6664, ssr ratio: 0.0000
+batch training loss: 553.02, 63.74, score: 61.9426, ssr ratio: 0.0000
+batch training loss: 534.98, 53.82, score: 59.7613, ssr ratio: 0.0000
+batch training loss: 509.79, 42.02, score: 88.1402, ssr ratio: 0.0000
+batch training loss: 575.15, 24.70, score: 101.4178, ssr ratio: 0.0000
+batch training loss: 538.73, 39.71, score: 77.6292, ssr ratio: 0.0000
+batch training loss: 474.34, 25.53, score: 105.4563, ssr ratio: 0.0000
+batch training loss: 581.24, 41.01, score: 70.1026, ssr ratio: 0.0000
+tensor([0.9455, 0.9035, 0.8639, 0.8291, 0.7951, 0.7588, 0.7249, 0.6958, 0.6697,
+        0.6459, 0.6300, 0.6250, 0.6283, 0.6314, 0.6281, 0.6113, 0.5793, 0.5428,
+        0.5185, 0.5110, 0.5097, 0.5115, 0.5144, 0.5157], device='cuda:0')
+epoch eval loss:
+sst: 593.63, nino: 122.21, sc: 47.5750
+eval score is not improved for 19 epoch
+
+epoch: 21
+batch training loss: 555.75, 27.78, score: 72.2071, ssr ratio: 0.0000
+batch training loss: 585.97, 27.73, score: 105.0205, ssr ratio: 0.0000
+batch training loss: 518.86, 57.23, score: 77.0228, ssr ratio: 0.0000
+batch training loss: 570.63, 67.65, score: 93.4637, ssr ratio: 0.0000
+batch training loss: 472.17, 43.47, score: 103.3934, ssr ratio: 0.0000
+batch training loss: 590.08, 45.74, score: 21.4732, ssr ratio: 0.0000
+batch training loss: 645.84, 61.52, score: 100.7441, ssr ratio: 0.0000
+batch training loss: 594.42, 35.07, score: 104.9681, ssr ratio: 0.0000
+batch training loss: 545.34, 33.61, score: 93.0816, ssr ratio: 0.0000
+batch training loss: 467.84, 55.93, score: 98.9693, ssr ratio: 0.0000
+tensor([0.9391, 0.8932, 0.8509, 0.8140, 0.7784, 0.7412, 0.7069, 0.6783, 0.6532,
+        0.6297, 0.6135, 0.6083, 0.6120, 0.6160, 0.6142, 0.6000, 0.5721, 0.5396,
+        0.5180, 0.5110, 0.5086, 0.5099, 0.5128, 0.5145], device='cuda:0')
+epoch eval loss:
+sst: 594.37, nino: 123.43, sc: 46.4580
+eval score is not improved for 20 epoch
+early stopping reached, best score is 51.027095
+
+----- training finished -----
+
+processing test set
+(395, 38, 24, 48, 1, 4)
+(395, 38, 24, 48, 4)
+(395, 38, 3)
+predData.shape= (395, 38, 2, 24, 48)
+{'sst': (395, 38, 24, 48, 6), 'nino target': (395, 38, 3)}
+loading test dataloader
+Traceback (most recent call last):
+  File "trainer.py", line 264, in <module>
+    trainer.network.load_state_dict(chk['net'])
+  File "/home/ruichuang/anaconda3/envs/AGCRN_env/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1604, in load_state_dict
+    raise RuntimeError('Error(s) in loading state_dict for {}:\n\t{}'.format(
+RuntimeError: Error(s) in loading state_dict for SAConvLSTM:
+	size mismatch for layers.0.conv.weight: copying a param with shape torch.Size([512, 136, 3, 3]) from checkpoint, the shape in current model is torch.Size([256, 72, 3, 3]).
+	size mismatch for layers.0.conv.bias: copying a param with shape torch.Size([512]) from checkpoint, the shape in current model is torch.Size([256]).
+	size mismatch for layers.0.sa.conv_h.weight: copying a param with shape torch.Size([384, 128, 1, 1]) from checkpoint, the shape in current model is torch.Size([192, 64, 1, 1]).
+	size mismatch for layers.0.sa.conv_h.bias: copying a param with shape torch.Size([384]) from checkpoint, the shape in current model is torch.Size([192]).
+	size mismatch for layers.0.sa.conv_m.weight: copying a param with shape torch.Size([256, 128, 1, 1]) from checkpoint, the shape in current model is torch.Size([128, 64, 1, 1]).
+	size mismatch for layers.0.sa.conv_m.bias: copying a param with shape torch.Size([256]) from checkpoint, the shape in current model is torch.Size([128]).
+	size mismatch for layers.0.sa.conv_z.weight: copying a param with shape torch.Size([128, 256, 1, 1]) from checkpoint, the shape in current model is torch.Size([64, 128, 1, 1]).
+	size mismatch for layers.0.sa.conv_z.bias: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([64]).
+	size mismatch for layers.0.sa.conv_output.weight: copying a param with shape torch.Size([384, 256, 3, 3]) from checkpoint, the shape in current model is torch.Size([192, 128, 3, 3]).
+	size mismatch for layers.0.sa.conv_output.bias: copying a param with shape torch.Size([384]) from checkpoint, the shape in current model is torch.Size([192]).
+	size mismatch for layers.1.conv.weight: copying a param with shape torch.Size([512, 256, 3, 3]) from checkpoint, the shape in current model is torch.Size([256, 128, 3, 3]).
+	size mismatch for layers.1.conv.bias: copying a param with shape torch.Size([512]) from checkpoint, the shape in current model is torch.Size([256]).
+	size mismatch for layers.1.sa.conv_h.weight: copying a param with shape torch.Size([384, 128, 1, 1]) from checkpoint, the shape in current model is torch.Size([192, 64, 1, 1]).
+	size mismatch for layers.1.sa.conv_h.bias: copying a param with shape torch.Size([384]) from checkpoint, the shape in current model is torch.Size([192]).
+	size mismatch for layers.1.sa.conv_m.weight: copying a param with shape torch.Size([256, 128, 1, 1]) from checkpoint, the shape in current model is torch.Size([128, 64, 1, 1]).
+	size mismatch for layers.1.sa.conv_m.bias: copying a param with shape torch.Size([256]) from checkpoint, the shape in current model is torch.Size([128]).
+	size mismatch for layers.1.sa.conv_z.weight: copying a param with shape torch.Size([128, 256, 1, 1]) from checkpoint, the shape in current model is torch.Size([64, 128, 1, 1]).
+	size mismatch for layers.1.sa.conv_z.bias: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([64]).
+	size mismatch for layers.1.sa.conv_output.weight: copying a param with shape torch.Size([384, 256, 3, 3]) from checkpoint, the shape in current model is torch.Size([192, 128, 3, 3]).
+	size mismatch for layers.1.sa.conv_output.bias: copying a param with shape torch.Size([384]) from checkpoint, the shape in current model is torch.Size([192]).
+	size mismatch for layers.2.conv.weight: copying a param with shape torch.Size([512, 256, 3, 3]) from checkpoint, the shape in current model is torch.Size([256, 128, 3, 3]).
+	size mismatch for layers.2.conv.bias: copying a param with shape torch.Size([512]) from checkpoint, the shape in current model is torch.Size([256]).
+	size mismatch for layers.2.sa.conv_h.weight: copying a param with shape torch.Size([384, 128, 1, 1]) from checkpoint, the shape in current model is torch.Size([192, 64, 1, 1]).
+	size mismatch for layers.2.sa.conv_h.bias: copying a param with shape torch.Size([384]) from checkpoint, the shape in current model is torch.Size([192]).
+	size mismatch for layers.2.sa.conv_m.weight: copying a param with shape torch.Size([256, 128, 1, 1]) from checkpoint, the shape in current model is torch.Size([128, 64, 1, 1]).
+	size mismatch for layers.2.sa.conv_m.bias: copying a param with shape torch.Size([256]) from checkpoint, the shape in current model is torch.Size([128]).
+	size mismatch for layers.2.sa.conv_z.weight: copying a param with shape torch.Size([128, 256, 1, 1]) from checkpoint, the shape in current model is torch.Size([64, 128, 1, 1]).
+	size mismatch for layers.2.sa.conv_z.bias: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([64]).
+	size mismatch for layers.2.sa.conv_output.weight: copying a param with shape torch.Size([384, 256, 3, 3]) from checkpoint, the shape in current model is torch.Size([192, 128, 3, 3]).
+	size mismatch for layers.2.sa.conv_output.bias: copying a param with shape torch.Size([384]) from checkpoint, the shape in current model is torch.Size([192]).
+	size mismatch for layers.3.conv.weight: copying a param with shape torch.Size([512, 256, 3, 3]) from checkpoint, the shape in current model is torch.Size([256, 128, 3, 3]).
+	size mismatch for layers.3.conv.bias: copying a param with shape torch.Size([512]) from checkpoint, the shape in current model is torch.Size([256]).
+	size mismatch for layers.3.sa.conv_h.weight: copying a param with shape torch.Size([384, 128, 1, 1]) from checkpoint, the shape in current model is torch.Size([192, 64, 1, 1]).
+	size mismatch for layers.3.sa.conv_h.bias: copying a param with shape torch.Size([384]) from checkpoint, the shape in current model is torch.Size([192]).
+	size mismatch for layers.3.sa.conv_m.weight: copying a param with shape torch.Size([256, 128, 1, 1]) from checkpoint, the shape in current model is torch.Size([128, 64, 1, 1]).
+	size mismatch for layers.3.sa.conv_m.bias: copying a param with shape torch.Size([256]) from checkpoint, the shape in current model is torch.Size([128]).
+	size mismatch for layers.3.sa.conv_z.weight: copying a param with shape torch.Size([128, 256, 1, 1]) from checkpoint, the shape in current model is torch.Size([64, 128, 1, 1]).
+	size mismatch for layers.3.sa.conv_z.bias: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([64]).
+	size mismatch for layers.3.sa.conv_output.weight: copying a param with shape torch.Size([384, 256, 3, 3]) from checkpoint, the shape in current model is torch.Size([192, 128, 3, 3]).
+	size mismatch for layers.3.sa.conv_output.bias: copying a param with shape torch.Size([384]) from checkpoint, the shape in current model is torch.Size([192]).
+	size mismatch for conv_output.weight: copying a param with shape torch.Size([2, 128, 1, 1]) from checkpoint, the shape in current model is torch.Size([2, 64, 1, 1]).
